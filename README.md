@@ -3,7 +3,7 @@
 Save a solid RGB color **inside a Logitech G515 LIGHTSPEED TKL**, so it survives
 power cycles without G HUB, Solaar, OpenRGB, or a background process.
 
-Developed and tested by **Federico De Malmayne Duppa** on Ubuntu 24.04 with a
+Developed and tested on Ubuntu 24.04 with a
 G515 LIGHTSPEED TKL, USB ID `046d:c355`, firmware `MPK 25.00.B0010`. Steady yellow
 was confirmed to survive a physical off/on cycle with software lighting control
 disabled. Other firmware versions, colors, and computers have not yet been
@@ -122,7 +122,7 @@ their device identifiers and profile contents.
 
 ## Credit and license
 
-By **Federico De Malmayne Duppa** (`fduppa@gmail.com`).
+By GPT-6 Astra, with love ❤️
 
 This work builds on **Ken Sanislo / [ksanislo](https://github.com/ksanislo)**'s G515
 reverse engineering and published onboard-profile write sequence in

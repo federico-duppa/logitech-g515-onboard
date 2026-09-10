@@ -1,7 +1,5 @@
 # Attribution
 
-Copyright (C) 2026 Federico De Malmayne Duppa <fduppa@gmail.com>
-
 The G515 ProfileManagement save sequence and fixed-color effect-slot selection
 were established by Ken Sanislo (`ksanislo`) and shared in the discussion of
 [Solaar PR #3149](https://github.com/pwr-Solaar/Solaar/pull/3149).
@@ -17,7 +15,7 @@ working prototype. The public tool replaces that runtime dependency with a
 standard-library Linux hidraw transport. HID++ reply matching and error handling
 were cross-checked against Solaar's `logitech_receiver/base.py`.
 
-Federico's contribution includes the working persistent-yellow device result,
+This project's contributions include the working persistent-yellow device result,
 reconstruction and verification of the profile/directory changes, dynamic
 feature discovery for this firmware, the reusable tool, automatic backups,
 tests, and documentation. Credit for the earlier protocol research remains with
