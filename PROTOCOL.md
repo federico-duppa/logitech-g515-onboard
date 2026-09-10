@@ -21,8 +21,10 @@ covered by offline tests; other models/firmware are not certified.
 
 The standalone builder was compared byte-for-byte with the successfully saved
 yellow profile and directory: both match exactly. Its 17 offline tests pass on
-Python 3.12. The standalone USB transport has not yet been hardware-validated;
-the initial preview encountered an access-denied error after USB re-enumeration.
+Python 3.12. After restoring the temporary hidraw ACL, the standalone USB
+transport passed a read-only preview against the same keyboard, reporting the
+saved profile with zero changes. The ACL was removed by USB re-enumeration before
+that check; the optional udev rule avoids this on a configured personal machine.
 
 ## Transport and storage
 

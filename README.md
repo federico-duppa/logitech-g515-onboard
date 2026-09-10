@@ -5,10 +5,10 @@ power cycles without G HUB, Solaar, OpenRGB, or a background process.
 
 Developed and tested on Ubuntu 24.04 with a G515 LIGHTSPEED TKL, USB ID
 `046d:c355`, firmware `MPK 25.00.B0010`. Steady yellow was confirmed to survive a
-physical off/on cycle with software lighting control disabled. The profile bytes
-and save sequence are hardware-proven; the standalone transport still needs a
-read-only preview on a fresh USB enumeration. Other firmware versions, colors,
-and computers have not yet been independently hardware-tested. See
+physical off/on cycle with software lighting control disabled. The packaged
+transport also passed a read-only preview against that keyboard, reporting the
+saved profile with zero changes. Other firmware versions, colors, and computers
+have not yet been independently hardware-tested. See
 [PROTOCOL.md](PROTOCOL.md) for the validation record.
 
 This is an experimental, model-specific flash configuration tool. It modifies
