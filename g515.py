@@ -175,6 +175,7 @@ def snapshot(keyboard, restoring=False):
 
 def build_profile(base, color):
     validate_profile(base)
+    require(len(color) == 3, "RGB color must contain exactly three bytes")
     result = bytearray(base)
     fixed = lambda rgb: b"\x01" + bytes(rgb) + bytes(7)
     result[30:74] = bytes(11) + fixed(color) + bytes(11) + fixed(c // 2 for c in color)

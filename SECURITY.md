@@ -8,6 +8,9 @@ device-flashing operation.
 - Close G HUB, Solaar, OpenRGB, and other Logitech/RGB tools before writing.
 - Grant access only to the exact G515 `hidraw` interface. Do not run the tool as
   root or grant broad access to every HID device.
+- If you install the optional udev rule, inspect it first: it matches Logitech
+  USB product `c355` and interface `02`, then grants only the active desktop
+  user's `uaccess` permission.
 - Keep the printed backup directory. It is deliberately ignored by Git because
   it can contain device-specific identifiers and profile data.
 - Do not disconnect the cable during either user-flash write.

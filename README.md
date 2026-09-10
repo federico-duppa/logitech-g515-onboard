@@ -20,7 +20,7 @@ Do not use this for the wired-only G515, G515 RAPID, or G915. Read
 
 ## Quick start
 
-Requires **Linux and Python 3.10+**, using only Python's standard library. No
+Requires **Linux and Python 3.9+**, using only Python's standard library. No
 installation, Python packages, or running service is required.
 
 ```bash
@@ -44,6 +44,19 @@ sudo setfacl -m u:"$(id -un)":rw /dev/hidraw10
 `setfacl` is provided by Ubuntu's `acl` package. Access disappears after unplugging
 or USB re-enumeration; rerun the preview to identify the current device path.
 Do not grant access to every hidraw device or run the entire tool as root.
+
+For a persistent per-user permission on a personal machine, install the included
+udev rule once instead of using `setfacl` after every reconnect:
+
+```bash
+sudo install -D -m0644 udev/99-logitech-g515-onboard.rules \
+  /etc/udev/rules.d/99-logitech-g515-onboard.rules
+sudo udevadm control --reload-rules
+# Unplug and reconnect the USB cable to apply the rule.
+```
+
+The rule grants access only to the G515's HID++ configuration interface and uses
+the logged-in desktop user's standard `uaccess` permission mechanism.
 
 When the preview looks right:
 

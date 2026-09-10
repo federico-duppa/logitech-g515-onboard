@@ -1,0 +1,4 @@
+# Logitech G515 LIGHTSPEED TKL HID++ configuration interface.
+# The `*:1.2` ancestor match selects USB interface number 02 (the HID++
+# management interface) while avoiding the keyboard input interfaces.
+SUBSYSTEM=="hidraw", KERNELS=="*:1.2", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c355", TAG+="uaccess"
