@@ -11,11 +11,14 @@ saved profile with zero changes. Other firmware versions, colors, and computers
 have not yet been independently hardware-tested. See
 [PROTOCOL.md](PROTOCOL.md) for the validation record.
 
+The wired-only G515 TKL (`046d:c358`, firmware `U1 67.01.B0008`) is also
+supported: steady blue survived a physical off/on cycle.
+
 This is an experimental, model-specific flash configuration tool. It modifies
 the user lighting profile and its directory, preserving the profile's other
 bytes. It does not write the factory profile or update firmware. Use the USB
 cable while configuring; receiver and Bluetooth configuration are not supported.
-Do not use this for the wired-only G515, G515 RAPID, or G915. Read
+Do not use this for the G515 RAPID or G915. Read
 [SECURITY.md](SECURITY.md) before running a write.
 
 ## Quick start
