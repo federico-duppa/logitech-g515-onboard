@@ -18,6 +18,7 @@ import zlib
 PROFILE_SIZE = 99
 DIRECTORY_SIZE = 16
 MODEL_ID = "0003:0000046D:0000C355"
+WIRED_MODEL_ID = "0003:0000046D:0000C358"
 FILES = {"factory-profile": (0x0101, 99), "factory-directory": (0x0100, 16),
          "user-profile": (0x0008, 99), "user-directory": (0x0000, 16)}
 
@@ -41,7 +42,7 @@ def identity(path):
     info = dict(line.split("=", 1) for line in
                 (Path("/sys/class/hidraw") / node.name / "device/uevent").read_text().splitlines()
                 if "=" in line)
-    require(info.get("HID_ID") == MODEL_ID, "Only USB 046d:c355 (G515 LIGHTSPEED TKL) is supported")
+    require(info.get("HID_ID") in (MODEL_ID, WIRED_MODEL_ID), "Only USB 046d:c355/c358 (G515 TKL) is supported")
     require(info.get("HID_PHYS", "").endswith("/input2"), "Select the G515 configuration interface (input2)")
     return info
 

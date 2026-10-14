@@ -9,7 +9,7 @@ device-flashing operation.
 - Grant access only to the exact G515 `hidraw` interface. Do not run the tool as
   root or grant broad access to every HID device.
 - If you install the optional udev rule, inspect it first: it matches Logitech
-  USB product `c355` and interface `02`, then grants only the active desktop
+  USB products `c355`/`c358` and interface `02`, then grants only the active desktop
   user's `uaccess` permission.
 - Keep the printed backup directory. It is deliberately ignored by Git because
   it can contain device-specific identifiers and profile data.
@@ -18,7 +18,7 @@ device-flashing operation.
   verifies both user writes afterward. If a check fails, stop and preserve the
   backup and error output.
 
-The supported model is the USB G515 LIGHTSPEED TKL (`046d:c355`, HID++
+The supported model is the USB G515 TKL (`046d:c355`/`c358`, HID++
 ProfileManagement `0x8101`). Other devices are rejected. The profile format is
 reverse-engineered and not an official Logitech specification.
 
